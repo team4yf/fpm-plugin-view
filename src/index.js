@@ -15,7 +15,7 @@ module.exports = {
       const { prefix, asset, views } = fpm.getConfig('view', {
         asset: 'public',
         views: 'views',
-        perfix: 'a',
+        prefix: 'a',
       })
       app.use(Views(path.join(root_dir, views), {
         extension: 'html',
@@ -52,14 +52,6 @@ module.exports = {
       fpm.bindRouter(router);
     });
 
-    
-    
-    
-    
-
-    fpm.registerAction('BEFORE_SERVER_START', () => {
-      // fpm.extendModule('job', bizModule)
-    });
     return;
 
   }
